@@ -5,68 +5,66 @@
 <title>Andria 4-Week Starter Plan</title>
 <!-- Source for assets/andria-4-week-starter-plan.pdf. Print to A4 PDF with no margins. -->
 <style>
-@font-face { font-family: "Barlow Condensed"; font-weight: 800; src: url("../assets/fonts/barlow-condensed-latin-800-normal.woff2") format("woff2"); }
-@font-face { font-family: "Barlow Condensed"; font-weight: 700; src: url("../assets/fonts/barlow-condensed-latin-700-normal.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-weight: 400; src: url("../assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-weight: 600; src: url("../assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-weight: 700; src: url("../assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-weight: 400; src: url("../assets/fonts/figtree-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-weight: 600; src: url("../assets/fonts/figtree-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-weight: 700; src: url("../assets/fonts/figtree-latin-700-normal.woff2") format("woff2"); }
 @page { size: A4; margin: 0; }
 * { box-sizing: border-box; }
-body { margin: 0; font-family: "Inter", Arial, sans-serif; font-size: 10.5pt; line-height: 1.5; color: #2b2e36; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-.page { position: relative; width: 210mm; height: 297mm; padding: 18mm 18mm 16mm; page-break-after: always; overflow: hidden; background: #fbf8f3; }
+body { margin: 0; font-family: "Figtree", Arial, sans-serif; font-size: 10.5pt; line-height: 1.5; color: #4a4160; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { position: relative; width: 210mm; height: 297mm; padding: 18mm 18mm 16mm; page-break-after: always; overflow: hidden; background: #f6f2fb; }
 .page:last-child { page-break-after: auto; }
-h1, h2, h3 { margin: 0; font-family: "Barlow Condensed", Arial Narrow, sans-serif; font-weight: 800; text-transform: uppercase; color: #16181d; line-height: .95; }
+h1, h2, h3 { margin: 0; font-family: "Figtree", Arial, sans-serif; font-weight: 700; letter-spacing: -.02em; color: #231a3a; line-height: .95; }
 h2 { font-size: 34pt; margin-bottom: 4mm; }
 h3 { font-size: 15pt; font-weight: 700; margin-bottom: 2mm; }
 p { margin: 0 0 3mm; }
-.kick { font-size: 8.5pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #f04524; margin-bottom: 3mm; }
-.foot { position: absolute; left: 18mm; right: 18mm; bottom: 9mm; display: flex; justify-content: space-between; font-size: 8pt; color: #8a8f9c; border-top: 1px solid #e3dccf; padding-top: 2.5mm; }
+.kick { font-size: 8.5pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6b3fc4; margin-bottom: 3mm; }
+.foot { position: absolute; left: 18mm; right: 18mm; bottom: 9mm; display: flex; justify-content: space-between; font-size: 8pt; color: #8a8f9c; border-top: 1px solid #ddd4ec; padding-top: 2.5mm; }
 
 /* cover */
-.cover { background: #16181d; color: #c9ccd6; padding: 0; }
-.cover .band { position: absolute; left: 0; right: 0; top: 0; height: 128mm; background: #ff5b3a; }
-.cover .logo { position: absolute; left: 18mm; top: 16mm; display: flex; align-items: center; gap: 3mm; font-family: "Barlow Condensed"; font-weight: 800; font-size: 18pt; letter-spacing: .04em; color: #16181d; text-transform: uppercase; }
+.cover { background: #231a3a; color: #c9ccd6; padding: 0; }
+.cover .band { position: absolute; left: 0; right: 0; top: 0; height: 128mm; background: #c8f135; }
+.cover .logo { position: absolute; left: 18mm; top: 16mm; display: flex; align-items: center; gap: 3mm; font-family: "Figtree"; font-weight: 800; font-size: 18pt; letter-spacing: .04em; color: #231a3a; text-transform: uppercase; }
 .cover .logo svg { width: 11mm; height: 11mm; }
-.cover .big { position: absolute; left: 16mm; top: 34mm; font-family: "Barlow Condensed"; font-weight: 800; font-size: 150pt; line-height: .8; color: #16181d; }
+.cover .big { position: absolute; left: 16mm; top: 34mm; font-family: "Figtree"; font-weight: 800; font-size: 150pt; line-height: .8; color: #231a3a; }
 .cover .title { position: absolute; left: 18mm; right: 18mm; top: 132mm; }
 .cover h1 { font-size: 54pt; color: #fff; }
-.cover h1 span { color: #ff5b3a; }
+.cover h1 span { color: #c8f135; }
 .cover .sub { margin-top: 6mm; font-size: 13pt; color: #c9ccd6; max-width: 140mm; }
-.cover .meta { position: absolute; left: 18mm; right: 18mm; bottom: 22mm; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid #ff5b3a; }
+.cover .meta { position: absolute; left: 18mm; right: 18mm; bottom: 22mm; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid #c8f135; }
 .cover .meta div { padding-top: 4mm; }
-.cover .meta b { display: block; font-family: "Barlow Condensed"; font-weight: 800; font-size: 26pt; color: #fff; line-height: 1; }
+.cover .meta b { display: block; font-family: "Figtree"; font-weight: 800; font-size: 26pt; color: #fff; line-height: 1; }
 .cover .meta span { font-size: 9pt; }
 
 /* lists and tables */
 .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
-.box { padding: 5mm 6mm; background: #fff; border: 1px solid #e3dccf; margin-bottom: 5mm; }
-.box.dark { background: #16181d; border-color: #16181d; color: #c9ccd6; }
+.box { padding: 5mm 6mm; background: #fff; border: 1px solid #ddd4ec; margin-bottom: 5mm; }
+.box.dark { background: #231a3a; border-color: #231a3a; color: #c9ccd6; }
 .box.dark h3 { color: #fff; }
 ul.dash { margin: 0; padding: 0; list-style: none; }
 ul.dash li { position: relative; padding-left: 5mm; margin-bottom: 1.6mm; }
-ul.dash li::before { content: ""; position: absolute; left: 0; top: 2.3mm; width: 2.6mm; height: 2px; background: #ff5b3a; }
+ul.dash li::before { content: ""; position: absolute; left: 0; top: 2.3mm; width: 2.6mm; height: 2px; background: #c8f135; }
 table { width: 100%; border-collapse: collapse; font-size: 9.5pt; background: #fff; }
-th, td { padding: 2.4mm 3mm; border-bottom: 1px solid #e3dccf; text-align: left; vertical-align: top; }
-thead th { background: #16181d; color: #fff; font-weight: 600; font-size: 8.5pt; letter-spacing: .06em; text-transform: uppercase; }
-td.n { white-space: nowrap; font-weight: 600; color: #16181d; }
+th, td { padding: 2.4mm 3mm; border-bottom: 1px solid #ddd4ec; text-align: left; vertical-align: top; }
+thead th { background: #231a3a; color: #fff; font-weight: 600; font-size: 8.5pt; letter-spacing: .06em; text-transform: uppercase; }
+td.n { white-space: nowrap; font-weight: 600; color: #231a3a; }
 .wk { margin-bottom: 7mm; }
-.wk h3 span { color: #f04524; }
+.wk h3 span { color: #6b3fc4; }
 .workout { margin-bottom: 6mm; }
-.workout .tag { display: inline-block; padding: 1mm 2.5mm; margin-bottom: 2mm; background: #ff5b3a; color: #16181d; font-weight: 700; font-size: 8pt; letter-spacing: .08em; text-transform: uppercase; }
+.workout .tag { display: inline-block; padding: 1mm 2.5mm; margin-bottom: 2mm; background: #c8f135; color: #231a3a; font-weight: 700; font-size: 8pt; letter-spacing: .08em; text-transform: uppercase; }
 .tick td, .tick th { text-align: center; }
 .tick td:first-child, .tick th:first-child { text-align: left; }
-.tick .sq { display: inline-block; width: 5mm; height: 5mm; border: 1.5px solid #16181d; }
+.tick .sq { display: inline-block; width: 5mm; height: 5mm; border: 1.5px solid #231a3a; }
 .note { font-size: 8.5pt; color: #6b7080; }
-.cta { position: absolute; left: 18mm; right: 18mm; bottom: 24mm; padding: 8mm; background: #16181d; color: #c9ccd6; }
+.cta { position: absolute; left: 18mm; right: 18mm; bottom: 24mm; padding: 8mm; background: #231a3a; color: #c9ccd6; }
 .cta h2 { color: #fff; font-size: 30pt; }
-.cta b { color: #ff5b3a; }
+.cta b { color: #c8f135; }
 </style>
 </head>
 <body>
 
 <section class="page cover">
   <div class="band"></div>
-  <div class="logo"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="3" fill="#16181d"/><path d="M11 31 20 9l9 22M14.5 24h11" fill="none" stroke="#ff5b3a" stroke-width="4" stroke-linecap="square"/></svg>Andria Fitness</div>
+  <div class="logo"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="3" fill="#231a3a"/><path d="M11 31 20 9l9 22M14.5 24h11" fill="none" stroke="#c8f135" stroke-width="4" stroke-linecap="square"/></svg>Andria Fitness</div>
   <div class="big">4<br>WEEKS</div>
   <div class="title">
     <h1>Starter <span>Plan</span></h1>

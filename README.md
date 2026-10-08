@@ -19,7 +19,7 @@ program.html      programs, prices and comparison (the paid step)
 legal.html        privacy, terms and health notice
 emails/           follow-up email templates (see below)
 lead-magnet/      source of the free plan PDF
-assets/           styles, script, fonts (Barlow Condensed and Inter, SIL OFL), images and the PDF
+assets/           styles, script, fonts (Figtree, SIL OFL), images and the PDF
 ```
 
 ## Email follow-up
