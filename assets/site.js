@@ -47,7 +47,6 @@
 
   function initCommon() {
     $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
-    $$('[data-month]').forEach(function (el) { el.textContent = new Date().toLocaleString('en-US', { month: 'long' }); });
 
     var header = $('[data-header]');
     if (header) {
@@ -127,7 +126,7 @@
       btn.addEventListener('click', function () {
         var frame = document.createElement('iframe');
         frame.src = btn.getAttribute('data-embed');
-        frame.title = 'Andria Fitness | About';
+        frame.title = btn.getAttribute('data-title') || 'Video';
         frame.allow = 'accelerometer; autoplay; encrypted-media; fullscreen; gyroscope; picture-in-picture';
         frame.referrerPolicy = 'strict-origin-when-cross-origin';
         frame.setAttribute('allowfullscreen', '');
@@ -245,7 +244,7 @@
   function initTrial() {
     var form = $('#trial-form');
     var start = $('[data-start-dates]');
-    var fmt = function (d) { return d.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric', month: 'short' }); };
+    var fmt = function (d) { return d.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' }); };
     start.innerHTML = '<option value="">Choose a date</option>';
     for (var i = 1; i <= CONFIG.trialDays; i++) {
       var d = new Date();
