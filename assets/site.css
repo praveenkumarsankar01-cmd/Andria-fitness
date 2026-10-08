@@ -133,7 +133,7 @@ body > main { flex: 1 0 auto; }
 .lead { max-width: 580px; margin: 0 auto; font-size: 19px; color: #c9ccd6; }
 .hero-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 30px 0 0; }
 .hero-photo { position: relative; height: 480px; margin-top: -190px; overflow: hidden; background: var(--ink-2); border-top: 6px solid var(--coral); }
-.hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
+.hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 
 /* facts */
 .facts { background: var(--ink); color: #c9ccd6; }
