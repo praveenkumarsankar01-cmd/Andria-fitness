@@ -38,7 +38,7 @@ Load these into your email tool (Mailchimp, Brevo, ConvertKit or similar). Merge
 - **Personal data is masked.** Contact email shows as `XXXX@XXXX.com`, phone as `+91 XXXXX XXXXX` and the street as `XXXX`. On the thank-you page the visitor's email shows as `XXXX@domain` and the phone keeps only the last 2 digits.
 - **Form data.** Sign-ups are kept in the browser (sessionStorage) to fill in the thank-you page. To receive them, paste a form endpoint (Formspree, a Make or Zapier webhook, or your email tool's form URL) into `endpoint` at the top of `assets/site.js`.
 - **Free plan PDF.** `assets/andria-4-week-starter-plan.pdf` is printed from `lead-magnet/plan.html` (A4, no margins, background graphics on). The cover image on the site is `assets/img/plan-cover.png`.
-- **Photos** come from Pexels (free licence) and load from Pexels for now. Download them into `assets/img` before launch.
+- **Photos.** The top photo is in `assets/img/hero-yoga.jpg`. The rest come from Pexels (free licence) and load from Pexels for now; download them into `assets/img` before launch.
 - **Link previews.** Before launch, set `og:image` in `index.html` to the full https URL on the live domain and add `og:url`, so WhatsApp, Facebook and LinkedIn show the share image.
 - **Online class video.** A YouTube video ("Why I teach free online Zoom yoga classes"), credited under the player. Swap it for the studio's own video when there is one (see the comment in `index.html`).
 - **Prices, class sizes, batch timings and reviews are sample content.** Replace them with the studio's real details and real member reviews (with permission) before launch.
