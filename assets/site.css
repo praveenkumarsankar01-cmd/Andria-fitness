@@ -47,7 +47,8 @@ strong { color: var(--ink); font-weight: 600; }
 [hidden] { display: none !important; }
 body { display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh; }
 body > main { flex: 1 0 auto; }
-[data-masked-phone], [data-masked-email] { white-space: nowrap; }
+[data-masked-phone] { white-space: nowrap; }
+[data-masked-email] { overflow-wrap: anywhere; }
 
 .wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .center { text-align: center; }

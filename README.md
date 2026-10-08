@@ -11,7 +11,7 @@ Static HTML, CSS and JavaScript. No build step, so the folder can be deployed as
 ```
 index.html        landing page: hero, quick facts, problem list, about and video, how we
                   help, free plan sign-up, how we train, how the free week works,
-                  programs, fit check, reviews, FAQ
+                  programs, fit check, reviews, FAQ, closing call to action
 trial.html        7-day free trial sign-up
 thank-you.html    thank-you page; ?type=plan shows the PDF download and a trial offer,
                   ?type=trial shows the booking details and the paid programs
