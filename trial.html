@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start Your 7-Day Free Trial | Andria Fitness</title>
+<meta name="description" content="Try Andria Fitness free for 7 days. Meet your coach, train at the studio or online, and get your 12-week plan.">
+<meta name="theme-color" content="#16181d">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="trial">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></symbol>
+</svg>
+<header class="site-header slim-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Andria Fitness, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="3" fill="#ff5b3a"/><path d="M11 31 20 9l9 22M14.5 24h11" fill="none" stroke="#16181d" stroke-width="4" stroke-linecap="square"/></svg>
+      <span class="brand-name">Andria<small>Fitness</small></span>
+    </a>
+    <p class="secure"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>No card needed</p>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <div class="wrap">
+      <p class="kicker">7-day free trial</p>
+      <h1>Your free week starts here</h1>
+      <p>Two minutes to fill in. Your coach will call or WhatsApp you within a day to book day one.</p>
+    </div>
+  </div>
+
+  <div class="wrap form-layout">
+    <form class="form-card" id="trial-form" novalidate>
+      <fieldset>
+        <legend>About you</legend>
+        <div class="grid-2">
+          <div class="field">
+            <label for="t-first">First name</label>
+            <input class="input" id="t-first" name="firstName" type="text" autocomplete="given-name" required data-msg="Please enter your first name.">
+            <p class="err"></p>
+          </div>
+          <div class="field">
+            <label for="t-last">Last name</label>
+            <input class="input" id="t-last" name="lastName" type="text" autocomplete="family-name" required data-msg="Please enter your last name.">
+            <p class="err"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="t-email">Email</label>
+          <input class="input" id="t-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required data-msg="Please enter your email.">
+          <p class="err"></p>
+        </div>
+        <div class="field">
+          <label for="t-phone">Phone / WhatsApp</label>
+          <div class="phone-row">
+            <select class="select" name="phoneCode" aria-label="Country code">
+              <option value="+91">IN +91</option>
+              <option value="+971">AE +971</option>
+              <option value="+65">SG +65</option>
+              <option value="+44">GB +44</option>
+              <option value="+1">US +1</option>
+            </select>
+            <input class="input" id="t-phone" name="phone" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="Mobile number" required data-msg="Please enter your phone number.">
+          </div>
+          <p class="err"></p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your goal</legend>
+        <fieldset class="field" data-required data-msg="Please pick your main goal.">
+          <legend>What's your main goal?</legend>
+          <div class="pills">
+            <label><input type="radio" name="goal" value="Lose weight"><span>Lose weight</span></label>
+            <label><input type="radio" name="goal" value="Get stronger"><span>Get stronger</span></label>
+            <label><input type="radio" name="goal" value="More energy"><span>More energy</span></label>
+            <label><input type="radio" name="goal" value="Tone up"><span>Tone up</span></label>
+          </div>
+          <p class="err"></p>
+        </fieldset>
+        <fieldset class="field" data-required data-msg="Please choose one.">
+          <legend>How active are you now?</legend>
+          <div class="pills">
+            <label><input type="radio" name="level" value="Just starting"><span>Just starting</span></label>
+            <label><input type="radio" name="level" value="Active sometimes"><span>Active sometimes</span></label>
+            <label><input type="radio" name="level" value="Train regularly"><span>Train regularly</span></label>
+          </div>
+          <p class="err"></p>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your trial</legend>
+        <fieldset class="field" data-required data-msg="Please choose studio or online.">
+          <legend>Where do you want to train?</legend>
+          <div class="pills">
+            <label><input type="radio" name="where" value="Studio (Chennai)"><span>Studio (Chennai)</span></label>
+            <label><input type="radio" name="where" value="Live online"><span>Live online</span></label>
+          </div>
+          <p class="err"></p>
+        </fieldset>
+        <div class="grid-2">
+          <div class="field">
+            <label for="t-start">Start date</label>
+            <select class="select" id="t-start" name="start" required data-msg="Please pick a start date." data-start-dates></select>
+            <p class="err"></p>
+          </div>
+          <div class="field">
+            <label for="t-time">Best time to train</label>
+            <select class="select" id="t-time" name="time" required data-msg="Please pick a time.">
+              <option value="">Choose one</option>
+              <option>Early morning (6–8 AM)</option>
+              <option>Morning (8–11 AM)</option>
+              <option>Evening (5–7 PM)</option>
+              <option>Late evening (7–9 PM)</option>
+            </select>
+            <p class="err"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="t-program">Program you're curious about <span class="opt">(optional)</span></label>
+          <select class="select" id="t-program" name="program">
+            <option value="">Not sure yet</option>
+            <option value="online">Online Coaching</option>
+            <option value="group">Small Group</option>
+            <option value="pt">1:1 Personal Training</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="t-health">Injuries or health conditions we should know about <span class="opt">(optional)</span></label>
+          <textarea class="textarea" id="t-health" name="health" rows="3" maxlength="500" placeholder="e.g. knee pain, back injury, pregnancy, thyroid"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="hp" aria-hidden="true"><label for="t-website">Leave this empty</label><input id="t-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <div class="field">
+        <label class="check"><input type="checkbox" name="consent" required data-msg="Please tick the box to continue."><span>I'm fit to exercise or will check with my doctor first, and I agree to the <a href="legal.html#terms" target="_blank">terms</a> and <a href="legal.html#privacy" target="_blank">privacy policy</a>.</span></label>
+        <p class="err"></p>
+      </div>
+      <div class="form-foot">
+        <button class="btn btn-coral btn-lg btn-block" type="submit">Start my free week <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+    </form>
+
+    <aside class="side">
+      <div class="side-card">
+        <h2>Your free week</h2>
+        <ul class="ticks">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Day 1: goal chat and movement check</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Days 2–6: unlimited classes</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Day 7: review and your 12-week plan</li>
+        </ul>
+      </div>
+      <div class="side-note"><strong>No card, nothing to cancel.</strong>If you want to keep going after day 7, you choose a program then.</div>
+      <div class="side-note"><strong>Women-only batches</strong>Mornings and evenings at the studio.</div>
+    </aside>
+  </div>
+</main>
+
+<footer class="funnel-footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Andria Fitness</span>
+    <nav aria-label="Legal"><a href="legal.html#privacy">Privacy</a><a href="legal.html#terms">Terms</a><a href="index.html">Home</a></nav>
+  </div>
+</footer>
+
+<div class="overlay" data-overlay hidden>
+  <div class="overlay-box" role="status" aria-live="polite"><div class="spinner"></div><p>Booking your free week…</p></div>
+</div>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>

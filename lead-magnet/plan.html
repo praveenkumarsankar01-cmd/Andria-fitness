@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Andria 4-Week Starter Plan</title>
+<!-- Source for assets/andria-4-week-starter-plan.pdf. Print to A4 PDF with no margins. -->
+<style>
+@font-face { font-family: "Barlow Condensed"; font-weight: 800; src: url("../assets/fonts/barlow-condensed-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-weight: 700; src: url("../assets/fonts/barlow-condensed-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 400; src: url("../assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url("../assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: url("../assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Inter", Arial, sans-serif; font-size: 10.5pt; line-height: 1.5; color: #2b2e36; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { position: relative; width: 210mm; height: 297mm; padding: 18mm 18mm 16mm; page-break-after: always; overflow: hidden; background: #fbf8f3; }
+.page:last-child { page-break-after: auto; }
+h1, h2, h3 { margin: 0; font-family: "Barlow Condensed", Arial Narrow, sans-serif; font-weight: 800; text-transform: uppercase; color: #16181d; line-height: .95; }
+h2 { font-size: 34pt; margin-bottom: 4mm; }
+h3 { font-size: 15pt; font-weight: 700; margin-bottom: 2mm; }
+p { margin: 0 0 3mm; }
+.kick { font-size: 8.5pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #f04524; margin-bottom: 3mm; }
+.foot { position: absolute; left: 18mm; right: 18mm; bottom: 9mm; display: flex; justify-content: space-between; font-size: 8pt; color: #8a8f9c; border-top: 1px solid #e3dccf; padding-top: 2.5mm; }
+
+/* cover */
+.cover { background: #16181d; color: #c9ccd6; padding: 0; }
+.cover .band { position: absolute; left: 0; right: 0; top: 0; height: 128mm; background: #ff5b3a; }
+.cover .logo { position: absolute; left: 18mm; top: 16mm; display: flex; align-items: center; gap: 3mm; font-family: "Barlow Condensed"; font-weight: 800; font-size: 18pt; letter-spacing: .04em; color: #16181d; text-transform: uppercase; }
+.cover .logo svg { width: 11mm; height: 11mm; }
+.cover .big { position: absolute; left: 16mm; top: 34mm; font-family: "Barlow Condensed"; font-weight: 800; font-size: 150pt; line-height: .8; color: #16181d; }
+.cover .title { position: absolute; left: 18mm; right: 18mm; top: 132mm; }
+.cover h1 { font-size: 54pt; color: #fff; }
+.cover h1 span { color: #ff5b3a; }
+.cover .sub { margin-top: 6mm; font-size: 13pt; color: #c9ccd6; max-width: 140mm; }
+.cover .meta { position: absolute; left: 18mm; right: 18mm; bottom: 22mm; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid #ff5b3a; }
+.cover .meta div { padding-top: 4mm; }
+.cover .meta b { display: block; font-family: "Barlow Condensed"; font-weight: 800; font-size: 26pt; color: #fff; line-height: 1; }
+.cover .meta span { font-size: 9pt; }
+
+/* lists and tables */
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+.box { padding: 5mm 6mm; background: #fff; border: 1px solid #e3dccf; margin-bottom: 5mm; }
+.box.dark { background: #16181d; border-color: #16181d; color: #c9ccd6; }
+.box.dark h3 { color: #fff; }
+ul.dash { margin: 0; padding: 0; list-style: none; }
+ul.dash li { position: relative; padding-left: 5mm; margin-bottom: 1.6mm; }
+ul.dash li::before { content: ""; position: absolute; left: 0; top: 2.3mm; width: 2.6mm; height: 2px; background: #ff5b3a; }
+table { width: 100%; border-collapse: collapse; font-size: 9.5pt; background: #fff; }
+th, td { padding: 2.4mm 3mm; border-bottom: 1px solid #e3dccf; text-align: left; vertical-align: top; }
+thead th { background: #16181d; color: #fff; font-weight: 600; font-size: 8.5pt; letter-spacing: .06em; text-transform: uppercase; }
+td.n { white-space: nowrap; font-weight: 600; color: #16181d; }
+.wk { margin-bottom: 7mm; }
+.wk h3 span { color: #f04524; }
+.workout { margin-bottom: 6mm; }
+.workout .tag { display: inline-block; padding: 1mm 2.5mm; margin-bottom: 2mm; background: #ff5b3a; color: #16181d; font-weight: 700; font-size: 8pt; letter-spacing: .08em; text-transform: uppercase; }
+.tick td, .tick th { text-align: center; }
+.tick td:first-child, .tick th:first-child { text-align: left; }
+.tick .sq { display: inline-block; width: 5mm; height: 5mm; border: 1.5px solid #16181d; }
+.note { font-size: 8.5pt; color: #6b7080; }
+.cta { position: absolute; left: 18mm; right: 18mm; bottom: 24mm; padding: 8mm; background: #16181d; color: #c9ccd6; }
+.cta h2 { color: #fff; font-size: 30pt; }
+.cta b { color: #ff5b3a; }
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="band"></div>
+  <div class="logo"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="3" fill="#16181d"/><path d="M11 31 20 9l9 22M14.5 24h11" fill="none" stroke="#ff5b3a" stroke-width="4" stroke-linecap="square"/></svg>Andria Fitness</div>
+  <div class="big">4<br>WEEKS</div>
+  <div class="title">
+    <h1>Starter <span>Plan</span></h1>
+    <p class="sub">Three short strength workouts a week. Home or gym. Written by the Andria coaching team for beginners and returners.</p>
+  </div>
+  <div class="meta">
+    <div><b>12</b><span>workouts</span></div>
+    <div><b>40 min</b><span>per session</span></div>
+    <div><b>2</b><span>dumbbells, or a gym</span></div>
+  </div>
+</section>
+
+<section class="page">
+  <p class="kick">Before you start</p>
+  <h2>How to use this plan</h2>
+  <div class="cols">
+    <div>
+      <div class="box">
+        <h3>Your week</h3>
+        <p>Train three days a week with a rest day in between, for example Monday, Wednesday, Friday. Do Workout A, then B, then C.</p>
+        <p>On the other days, walk. Aim for 7,000 to 8,000 steps.</p>
+      </div>
+      <div class="box">
+        <h3>Pick the right weight</h3>
+        <p>Choose a weight you can lift for every rep with good form, and that leaves two reps "in the tank". Most women start with 2 to 5 kg dumbbells.</p>
+        <p>No dumbbells? Use filled water bottles or a backpack with books, or do the bodyweight version.</p>
+      </div>
+      <div class="box">
+        <h3>Rest</h3>
+        <p>Rest 60 to 90 seconds between sets. Breathe out as you push or pull.</p>
+      </div>
+    </div>
+    <div>
+      <div class="box dark">
+        <h3>Warm-up (5 minutes)</h3>
+        <ul class="dash">
+          <li>March on the spot, 1 minute</li>
+          <li>Arm circles, 30 seconds each way</li>
+          <li>Hip circles, 30 seconds each way</li>
+          <li>Bodyweight squats x 10</li>
+          <li>Glute bridges x 10</li>
+          <li>Cat-cow x 6</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Cool-down (5 minutes)</h3>
+        <ul class="dash">
+          <li>Slow walk, 2 minutes</li>
+          <li>Hamstring stretch, 30 seconds each leg</li>
+          <li>Hip flexor stretch, 30 seconds each side</li>
+          <li>Chest stretch in a doorway, 30 seconds</li>
+          <li>Child's pose, 30 seconds</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Safety first</h3>
+        <p class="note">Check with your doctor before you start, especially if you are pregnant or have a medical condition or injury. Stop if anything hurts (effort is fine, pain is not).</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Andria Fitness · 4-Week Starter Plan</span><span>2</span></div>
+</section>
+
+<section class="page">
+  <p class="kick">The workouts</p>
+  <h2>A, B and C</h2>
+  <div class="workout">
+    <span class="tag">Workout A · Legs and core</span>
+    <table>
+      <thead><tr><th>Exercise</th><th>Sets x reps</th><th>Easier option</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Goblet squat</td><td>3 x 10</td><td>Squat to a chair</td></tr>
+        <tr><td class="n">Romanian deadlift</td><td>3 x 10</td><td>No weight, hands on thighs</td></tr>
+        <tr><td class="n">Glute bridge</td><td>3 x 12</td><td>Smaller range</td></tr>
+        <tr><td class="n">Dead bug</td><td>3 x 8 each side</td><td>Move only the legs</td></tr>
+        <tr><td class="n">Plank</td><td>3 x 20 seconds</td><td>Knees down</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="workout">
+    <span class="tag">Workout B · Upper body and core</span>
+    <table>
+      <thead><tr><th>Exercise</th><th>Sets x reps</th><th>Easier option</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Incline push-up</td><td>3 x 8</td><td>Hands on a wall</td></tr>
+        <tr><td class="n">One-arm dumbbell row</td><td>3 x 10 each side</td><td>Lighter weight</td></tr>
+        <tr><td class="n">Dumbbell shoulder press</td><td>3 x 10</td><td>Seated</td></tr>
+        <tr><td class="n">Side plank</td><td>2 x 15 seconds each side</td><td>Knees down</td></tr>
+        <tr><td class="n">Bird dog</td><td>2 x 8 each side</td><td>Arms only, then legs only</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="workout">
+    <span class="tag">Workout C · Full body</span>
+    <table>
+      <thead><tr><th>Exercise</th><th>Sets x reps</th><th>Easier option</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Reverse lunge</td><td>3 x 8 each side</td><td>Hold a wall or chair</td></tr>
+        <tr><td class="n">Dumbbell floor press</td><td>3 x 10</td><td>Lighter weight</td></tr>
+        <tr><td class="n">Step-up</td><td>3 x 8 each side</td><td>Lower step</td></tr>
+        <tr><td class="n">Farmer's carry</td><td>3 x 30 seconds</td><td>Lighter weight</td></tr>
+        <tr><td class="n">Finisher: fast march</td><td>6 rounds: 20 s on, 40 s off</td><td>Normal pace</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="foot"><span>Andria Fitness · 4-Week Starter Plan</span><span>3</span></div>
+</section>
+
+<section class="page">
+  <p class="kick">Week by week</p>
+  <h2>Build a little each week</h2>
+  <div class="wk box"><h3>Week 1 <span>· Learn the moves</span></h3><p>Do 2 sets of each exercise instead of 3. Move slowly and focus on form. Write down the weights you use.</p></div>
+  <div class="wk box"><h3>Week 2 <span>· Add a set</span></h3><p>Do the full 3 sets. Keep the same weights. You should still have about two reps left at the end of each set.</p></div>
+  <div class="wk box"><h3>Week 3 <span>· Add weight or reps</span></h3><p>If the last set felt easy, go up one step in weight, or add 2 reps to each set. Planks and carries: add 5 to 10 seconds.</p></div>
+  <div class="wk box"><h3>Week 4 <span>· Test yourself</span></h3><p>Repeat week 3, then on your last day do Workout A and count how many good goblet squats you can do in one set. Compare it with week 1.</p></div>
+
+  <p class="kick" style="margin-top:8mm">Tick it off</p>
+  <table class="tick">
+    <thead><tr><th>Week</th><th>Workout A</th><th>Workout B</th><th>Workout C</th><th>Steps on rest days</th></tr></thead>
+    <tbody>
+      <tr><td class="n">Week 1</td><td><span class="sq"></span></td><td><span class="sq"></span></td><td><span class="sq"></span></td><td><span class="sq"></span></td></tr>
+      <tr><td class="n">Week 2</td><td><span class="sq"></span></td><td><span class="sq"></span></td><td><span class="sq"></span></td><td><span class="sq"></span></td></tr>
+      <tr><td class="n">Week 3</td><td><span class="sq"></span></td><td><span class="sq"></span></td><td><span class="sq"></span></td><td><span class="sq"></span></td></tr>
+      <tr><td class="n">Week 4</td><td><span class="sq"></span></td><td><span class="sq"></span></td><td><span class="sq"></span></td><td><span class="sq"></span></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><span>Andria Fitness · 4-Week Starter Plan</span><span>4</span></div>
+</section>
+
+<section class="page">
+  <p class="kick">Food habits</p>
+  <h2>Five habits that matter most</h2>
+  <p style="max-width:150mm">No strict diet. Keep eating the food you like, and build these habits one at a time.</p>
+  <div class="cols">
+    <div>
+      <div class="box"><h3>1. Protein at every meal</h3><p>Dal, paneer, curd, eggs, chicken, fish, sprouts or tofu. Aim for a palm-sized portion each meal.</p></div>
+      <div class="box"><h3>2. Half a plate of vegetables</h3><p>At lunch and dinner. Any kind counts: poriyal, salad, sabzi, soup.</p></div>
+      <div class="box"><h3>3. Water first</h3><p>2 to 3 litres a day, more on training days and in the heat.</p></div>
+    </div>
+    <div>
+      <div class="box"><h3>4. Sleep 7 hours</h3><p>Poor sleep makes cravings and low energy worse. Keep a regular bedtime.</p></div>
+      <div class="box"><h3>5. Walk every day</h3><p>7,000 to 8,000 steps. A 10-minute walk after meals is an easy start.</p></div>
+      <div class="box dark"><h3>Go easy on</h3><p>Sugary drinks, fried snacks most days, and large late-night meals. Not banned, just less often.</p></div>
+    </div>
+  </div>
+  <div class="cta">
+    <h2>Want a coach with you?</h2>
+    <p>Try the Andria studio or live online classes <b>free for 7 days</b>. A coach checks your form from day one. No card needed.</p>
+    <p>Book from the link in your welcome email.</p>
+  </div>
+  <div class="foot"><span>Andria Fitness · 4-Week Starter Plan</span><span>5</span></div>
+</section>
+
+</body>
+</html>
