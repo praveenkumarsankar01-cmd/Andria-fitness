@@ -123,6 +123,41 @@
       new IntersectionObserver(function (e) { bandIn = e[0].isIntersecting; update(); }).observe(band);
     }
 
+    $$('[data-video]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var frame = document.createElement('iframe');
+        frame.src = btn.getAttribute('data-embed');
+        frame.title = 'Andria Fitness | About';
+        frame.allow = 'accelerometer; autoplay; encrypted-media; fullscreen; gyroscope; picture-in-picture';
+        frame.referrerPolicy = 'strict-origin-when-cross-origin';
+        frame.setAttribute('allowfullscreen', '');
+        btn.parentNode.replaceChild(frame, btn);
+        frame.focus();
+      });
+    });
+
+    // "Show all 6" and "Read more" toggles (phone only).
+    var toggle = function (btn, box, on, off) {
+      if (!btn || !box) return;
+      btn.addEventListener('click', function () {
+        var open = box.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', String(open));
+        btn.firstElementChild.textContent = open ? on : off;
+      });
+    };
+    toggle($('[data-familiar-more]'), $('.familiar-list'), 'Show fewer', 'Show all 6');
+    toggle($('[data-about-more]'), $('.about-copy'), 'Read less', 'Read more');
+
+    // Good fit: collapsible on phone, always open on larger screens.
+    var phone = window.matchMedia('(max-width: 640px)');
+    var fits = $$('.fit-card');
+    var syncFit = function () { fits.forEach(function (d) { d.open = !phone.matches; }); };
+    fits.forEach(function (d) {
+      $('summary', d).addEventListener('click', function (e) { if (!phone.matches) e.preventDefault(); });
+    });
+    syncFit();
+    if (phone.addEventListener) phone.addEventListener('change', syncFit);
+
     var form = $('#plan-form');
     if (!form) return;
     liveCheck(form);
