@@ -40,7 +40,7 @@ Load these into your email tool (Mailchimp, Brevo, ConvertKit or similar). Merge
 - **Free plan PDF.** `assets/andria-4-week-starter-plan.pdf` is printed from `lead-magnet/plan.html` (A4, no margins, background graphics on). The cover image on the site is `assets/img/plan-cover.png`.
 - **Photos** come from Pexels (free licence) and load from Pexels for now. Download them into `assets/img` before launch.
 - **Link previews.** Before launch, set `og:image` in `index.html` to the full https URL on the live domain and add `og:url`, so WhatsApp, Facebook and LinkedIn show the share image.
-- **About video.** The featured video is a TED talk by Wendy Suzuki, credited under the player. Swap it for the studio's own video when there is one (see the comment in `index.html`).
+- **Online class video.** A Pexels stock clip of a coach teaching online. Swap it for the studio's own video when there is one (see the comment in `index.html`).
 - **Prices, class sizes, batch timings and reviews are sample content.** Replace them with the studio's real details and real member reviews (with permission) before launch.
 
 ## Run locally

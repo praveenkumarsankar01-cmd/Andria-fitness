@@ -124,14 +124,30 @@
 
     $$('[data-video]').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        var frame = document.createElement('iframe');
-        frame.src = btn.getAttribute('data-embed');
-        frame.title = btn.getAttribute('data-title') || 'Video';
-        frame.allow = 'accelerometer; autoplay; encrypted-media; fullscreen; gyroscope; picture-in-picture';
-        frame.referrerPolicy = 'strict-origin-when-cross-origin';
-        frame.setAttribute('allowfullscreen', '');
-        btn.parentNode.replaceChild(frame, btn);
-        frame.focus();
+        var video = document.createElement('video');
+        var list = btn.getAttribute('data-sources').split(' ');
+        video.controls = true;
+        video.autoplay = true;
+        video.playsInline = true;
+        video.poster = btn.querySelector('.vf-img').currentSrc;
+        list.forEach(function (url, i) {
+          var source = document.createElement('source');
+          source.src = url;
+          source.type = 'video/mp4';
+          // If no file loads, link to the video page instead of leaving a dead player.
+          if (i === list.length - 1) source.addEventListener('error', function () {
+            var link = document.createElement('a');
+            link.className = 'video-fallback';
+            link.href = btn.getAttribute('data-page');
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.textContent = 'Watch the class video';
+            video.parentNode.replaceChild(link, video);
+          });
+          video.appendChild(source);
+        });
+        btn.parentNode.replaceChild(video, btn);
+        video.focus();
       });
     });
 
