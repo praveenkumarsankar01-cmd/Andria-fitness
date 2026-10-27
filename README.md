@@ -35,7 +35,8 @@ Load these into your email tool (Mailchimp, Brevo, ConvertKit or similar). Merge
 
 ## Notes
 
-- **Personal data is masked.** Contact email shows as `XXXX@XXXX.com`, phone as `+91 XXXXX XXXXX` and the street as `XXXX`. On the thank-you page the visitor's email shows as `XXXX@domain` and the phone keeps only the last 2 digits.
+- **Contact details are fictional.** The email (`hello@andriafitness.com`), phone (`+44 7700 900318`) and street address look real but reach no one: the number is from Ofcom's range reserved for drama, so it never connects to a real line, and the email domain is unregistered. Replace them with the real ones before launch.
+- **Visitor data is masked.** On the thank-you page the visitor's email keeps only its first 2 letters and the domain (`pr•••••@gmail.com`) and the phone only its last 2 digits.
 - **Form data.** Sign-ups are kept in the browser (sessionStorage) to fill in the thank-you page. To receive them, paste a form endpoint (Formspree, a Make or Zapier webhook, or your email tool's form URL) into `endpoint` at the top of `assets/site.js`.
 - **Free plan PDF.** `assets/andria-4-week-starter-plan.pdf` is printed from `lead-magnet/plan.html` (A4, no margins, background graphics on). The cover image on the site is `assets/img/plan-cover.png`.
 - **Photos.** The top photo is in `assets/img/hero-yoga.jpg`. The rest come from Pexels (free licence) and load from Pexels for now; download them into `assets/img` before launch.
