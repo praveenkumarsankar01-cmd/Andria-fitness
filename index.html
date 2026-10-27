@@ -90,10 +90,10 @@
       <div class="wrap hero-copy">
         <p class="kicker on-dark">Strength · Weight loss · Coaching</p>
         <h1>Get stronger. Lose weight. <span>Feel like you again.</span></h1>
-        <p class="lead">Coach-led workouts and simple food habits for busy women. Start free with our 4-week plan, or train with us for 7 days.</p>
+        <p class="lead">Coach-led workouts and simple food habits for busy women. Start free with one of our 4-week plans, or train with us for 7 days.</p>
         <div class="hero-ctas">
           <a class="btn btn-coral btn-lg" href="trial.html">Start 7-day free trial <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-line-light btn-lg" href="#free-plan"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg> <span class="t-desk">Get the free plan</span><span class="ph-only t-phone">Or get the free 4-week plan</span></a>
+          <a class="btn btn-line-light btn-lg" href="#free-plan"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg> <span class="t-desk">Get the free plan</span><span class="ph-only t-phone">Or get a free 4-week plan</span></a>
         </div>
       </div>
     </div>
@@ -234,23 +234,46 @@
     </div>
   </section>
 
-  <!-- FREE PLAN (lead magnet) -->
+  <!-- FREE PLANS (lead magnets): the picker swaps the copy below; plan details live in PLANS in assets/site.js -->
   <section class="section section-tint" id="free-plan">
     <div class="wrap plan-grid">
-      <div class="plan-cover">
-        <img src="assets/img/plan-cover.png" alt="Cover of the Andria 4-week starter plan" width="600" height="848" loading="lazy">
+      <div class="plan-pick" role="radiogroup" aria-labelledby="plan-pick-label" data-plan-pick>
+        <p class="pick-label" id="plan-pick-label">Pick your free plan</p>
+        <div class="pick-grid">
+          <label class="pick" style="--plan: #c8f135">
+            <input type="radio" name="plan-pick" value="starter" checked>
+            <span class="pick-cover"><img src="assets/img/plan-cover.png" alt="" width="600" height="849" loading="lazy"></span>
+            <span class="pick-name">Starter</span>
+          </label>
+          <label class="pick" style="--plan: #7a1c3c">
+            <input type="radio" name="plan-pick" value="fat-loss">
+            <span class="pick-cover"><img src="assets/img/plan-cover-fat-loss.png" alt="" width="600" height="849" loading="lazy"></span>
+            <span class="pick-name">Fat loss</span>
+          </label>
+          <label class="pick" style="--plan: #121214">
+            <input type="radio" name="plan-pick" value="home">
+            <span class="pick-cover"><img src="assets/img/plan-cover-home.png" alt="" width="600" height="849" loading="lazy"></span>
+            <span class="pick-name">Home</span>
+          </label>
+          <label class="pick" style="--plan: #a8e4b9">
+            <input type="radio" name="plan-pick" value="tone-up">
+            <span class="pick-cover"><img src="assets/img/plan-cover-tone-up.png" alt="" width="600" height="849" loading="lazy"></span>
+            <span class="pick-name">Tone up</span>
+          </label>
+        </div>
       </div>
       <div class="plan-copy">
         <p class="kicker">Free download</p>
-        <h2>Your 4-week starter plan</h2>
-        <p>Three short workouts a week. Each week builds on the last, so you get stronger without guessing.</p>
-        <ol class="weeks">
+        <h2 data-plan-title>Your 4-week starter plan</h2>
+        <p data-plan-intro>Three short workouts a week. Each week builds on the last, so you get stronger without guessing.</p>
+        <ol class="weeks" data-plan-weeks>
           <li><b>Week 1</b><span>Learn the moves</span></li>
           <li><b>Week 2</b><span>Add a set</span></li>
           <li><b>Week 3</b><span>Add weight or reps</span></li>
           <li><b>Week 4</b><span>Test yourself</span></li>
         </ol>
         <form class="optin" id="plan-form" novalidate>
+          <input type="hidden" name="plan" value="starter">
           <div class="optin-row">
             <div class="field">
               <label for="p-name">First name</label>
@@ -485,8 +508,8 @@
           <p>No. The 7 days are free and we don't ask for card details. If you want to continue, you pick a program after your review on day 7.</p>
         </details>
         <details>
-          <summary>What's in the free plan?</summary>
-          <p>12 workouts over 4 weeks, a warm-up and cool-down, a progress tracker and a one-page food habits guide. You need a pair of dumbbells or a gym.</p>
+          <summary>What's in the free plans?</summary>
+          <p>Pick one of four 4-week plans: Starter, Fat loss, Home or Tone up. Each has 12 workouts, a warm-up and cool-down, a progress tracker and a page of simple habits. The Home plan needs no equipment; the others need a pair of dumbbells or a gym.</p>
         </details>
         <details>
           <summary>Will I get a diet plan?</summary>
@@ -530,7 +553,7 @@
     <div>
       <h3>Start</h3>
       <ul>
-        <li><a href="#free-plan">Free 4-week plan</a></li>
+        <li><a href="#free-plan">Free 4-week plans</a></li>
         <li><a href="trial.html">7-day free trial</a></li>
         <li><a href="program.html">Programs and prices</a></li>
       </ul>

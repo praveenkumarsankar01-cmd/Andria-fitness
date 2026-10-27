@@ -9,6 +9,34 @@
   };
 
   var PROGRAMS = { online: 'Online Coaching', group: 'Small Group', pt: '1:1 Personal Training' };
+  // Free plans: the landing page picker and the thank-you page both read from here.
+  // Each PDF is printed from lead-magnet/, and its cover is a picture of that PDF's first page.
+  var PLANS = {
+    'starter': {
+      name: '4-Week Starter Plan', label: '4-week starter plan', colour: '#c8f135',
+      intro: 'Three short workouts a week. Each week builds on the last, so you get stronger without guessing.',
+      weeks: ['Learn the moves', 'Add a set', 'Add weight or reps', 'Test yourself'],
+      cover: 'assets/img/plan-cover.png', pdf: 'assets/andria-4-week-starter-plan.pdf'
+    },
+    'fat-loss': {
+      name: '4-Week Fat-Loss Plan', label: '4-week fat-loss plan', colour: '#7a1c3c',
+      intro: 'Three 30-minute strength circuits a week and a daily walk. Lose fat steadily, without crash diets or skipped meals.',
+      weeks: ['Learn the circuits', 'Add a round', 'Work a little longer', 'Finish strong'],
+      cover: 'assets/img/plan-cover-fat-loss.png', pdf: 'assets/andria-4-week-fat-loss-plan.pdf'
+    },
+    'home': {
+      name: '4-Week Home Plan', label: '4-week home plan', colour: '#121214',
+      intro: 'No equipment and no gym. Three 25-minute bodyweight workouts a week, done in your living room.',
+      weeks: ['Learn the moves', 'Add a set', 'Slow it down', 'Test yourself'],
+      cover: 'assets/img/plan-cover-home.png', pdf: 'assets/andria-4-week-home-plan.pdf'
+    },
+    'tone-up': {
+      name: '4-Week Tone-Up Plan', label: '4-week tone-up plan', colour: '#a8e4b9',
+      intro: 'Three dumbbell workouts a week for your glutes, arms and core. Firmer muscle, better posture, more confidence.',
+      weeks: ['Learn the moves', 'Add a set', 'Slow the lowering', 'Add weight or reps'],
+      cover: 'assets/img/plan-cover-tone-up.png', pdf: 'assets/andria-4-week-tone-up-plan.pdf'
+    }
+  };
   var KEY = 'andria.signup';
 
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
@@ -160,12 +188,29 @@
     var form = $('#plan-form');
     if (!form) return;
     liveCheck(form);
+
+    // Free plan picker: swap the title, intro and weeks, and send the chosen plan with the form.
+    var showPlan = function (key) {
+      var plan = PLANS[key];
+      if (!plan) return;
+      $('[data-plan-title]').textContent = 'Your ' + plan.label;
+      $('[data-plan-intro]').textContent = plan.intro;
+      $$('[data-plan-weeks] span').forEach(function (el, i) { el.textContent = plan.weeks[i]; });
+      form.plan.value = key;
+    };
+    var picker = $('[data-plan-pick]');
+    if (picker) {
+      picker.addEventListener('change', function (e) { showPlan(e.target.value); });
+      var picked = $('input:checked', picker); // the browser may restore an earlier choice on Back
+      if (picked) showPlan(picked.value);
+    }
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!checkAll(form)) return;
       var data = formData(form);
       if (form.website.value) { location.href = 'thank-you.html?type=plan'; return; }
       data.type = 'plan';
+      data.planName = (PLANS[data.plan] || PLANS.starter).name;
       store.set(data);
       var btn = $('button[type=submit]', form);
       btn.disabled = true;
@@ -288,6 +333,15 @@
     else $$('[data-name-wrap]', section).forEach(function (el) { el.hidden = true; });
     if (data.email) $$('[data-masked-email]', section).forEach(function (el) { el.textContent = maskEmail(data.email); });
     if (data.phone) $$('[data-masked-phone]', section).forEach(function (el) { el.textContent = maskPhone(data.phoneCode, data.phone); });
+    if (view === 'plan' && PLANS[data.plan]) {
+      var plan = PLANS[data.plan];
+      $('[data-plan-label]', section).textContent = 'Your ' + plan.label + ' is ready';
+      $('[data-plan-pdf]', section).href = plan.pdf;
+      var cover = $('[data-plan-cover]', section);
+      cover.src = plan.cover;
+      cover.alt = 'Cover of the Andria ' + plan.label;
+      cover.parentNode.style.setProperty('--plan', plan.colour);
+    }
     if (view === 'trial') {
       $('[data-start]', section).textContent = data.startLabel || data.start;
       $('[data-where]', section).textContent = data.where;

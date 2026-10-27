@@ -1,0 +1,73 @@
+/* Shared styles for the free plan PDFs. Each plan sets its colours on :root;
+   the defaults below are the Starter Plan's (lime and ink). */
+@font-face { font-family: "Figtree"; font-weight: 400; src: url("../assets/fonts/figtree-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-weight: 600; src: url("../assets/fonts/figtree-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-weight: 700; src: url("../assets/fonts/figtree-latin-700-normal.woff2") format("woff2"); }
+:root {
+  --paper: #f6f2fb;      /* page background */
+  --text: #4a4160;
+  --ink: #231a3a;        /* headings, table text */
+  --kick: #6b3fc4;       /* small caps labels, week names */
+  --line: #ddd4ec;
+  --band: #c8f135;       /* cover: top band */
+  --band-ink: #231a3a;   /* cover: logo and "4 WEEKS" on the band */
+  --panel: #231a3a;      /* cover bottom, dark boxes, table heads, call to action */
+  --panel-text: #c9ccd6;
+  --accent: #c8f135;     /* highlight on dark: title word, rules, bold */
+  --bullet: #c8f135;
+  --tag: #c8f135;        /* workout labels */
+  --tag-ink: #231a3a;
+}
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Figtree", Arial, sans-serif; font-size: 10.5pt; line-height: 1.5; color: var(--text); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { position: relative; width: 210mm; height: 297mm; padding: 18mm 18mm 16mm; page-break-after: always; overflow: hidden; background: var(--paper); }
+.page:last-child { page-break-after: auto; }
+h1, h2, h3 { margin: 0; font-family: "Figtree", Arial, sans-serif; font-weight: 700; letter-spacing: -.02em; color: var(--ink); line-height: .95; }
+h2 { font-size: 34pt; margin-bottom: 4mm; }
+h3 { font-size: 15pt; font-weight: 700; margin-bottom: 2mm; }
+p { margin: 0 0 3mm; }
+.kick { font-size: 8.5pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--kick); margin-bottom: 3mm; }
+.foot { position: absolute; left: 18mm; right: 18mm; bottom: 9mm; display: flex; justify-content: space-between; font-size: 8pt; color: #8a8f9c; border-top: 1px solid var(--line); padding-top: 2.5mm; }
+
+/* cover */
+.cover { background: var(--panel); color: var(--panel-text); padding: 0; }
+.cover .band { position: absolute; left: 0; right: 0; top: 0; height: 128mm; background: var(--band); }
+.cover .logo { position: absolute; left: 18mm; top: 16mm; display: flex; align-items: center; gap: 3mm; font-family: "Figtree"; font-weight: 800; font-size: 18pt; letter-spacing: .04em; color: var(--band-ink); text-transform: uppercase; }
+.cover .logo svg { width: 11mm; height: 11mm; }
+.cover .logo rect { fill: var(--band-ink); }
+.cover .logo path { stroke: var(--band); }
+.cover .big { position: absolute; left: 16mm; top: 34mm; font-family: "Figtree"; font-weight: 800; font-size: 150pt; line-height: .8; color: var(--band-ink); }
+.cover .title { position: absolute; left: 18mm; right: 18mm; top: 132mm; }
+.cover h1 { font-size: 54pt; color: #fff; }
+.cover h1 span { color: var(--accent); }
+.cover .sub { margin-top: 6mm; font-size: 13pt; color: var(--panel-text); max-width: 140mm; }
+.cover .meta { position: absolute; left: 18mm; right: 18mm; bottom: 22mm; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--accent); }
+.cover .meta div { padding-top: 4mm; }
+.cover .meta b { display: block; font-family: "Figtree"; font-weight: 800; font-size: 26pt; color: #fff; line-height: 1; }
+.cover .meta span { font-size: 9pt; }
+
+/* lists and tables */
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+.box { padding: 5mm 6mm; background: #fff; border: 1px solid var(--line); margin-bottom: 5mm; }
+.box.dark { background: var(--panel); border-color: var(--panel); color: var(--panel-text); }
+.box.dark h3 { color: #fff; }
+ul.dash { margin: 0; padding: 0; list-style: none; }
+ul.dash li { position: relative; padding-left: 5mm; margin-bottom: 1.6mm; }
+ul.dash li::before { content: ""; position: absolute; left: 0; top: 2.3mm; width: 2.6mm; height: 2px; background: var(--bullet); }
+.box.dark ul.dash li::before { background: var(--accent); }
+table { width: 100%; border-collapse: collapse; font-size: 9.5pt; background: #fff; }
+th, td { padding: 2.4mm 3mm; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+thead th { background: var(--panel); color: #fff; font-weight: 600; font-size: 8.5pt; letter-spacing: .06em; text-transform: uppercase; }
+td.n { white-space: nowrap; font-weight: 600; color: var(--ink); }
+.wk { margin-bottom: 7mm; }
+.wk h3 span { color: var(--kick); }
+.workout { margin-bottom: 6mm; }
+.workout .tag { display: inline-block; padding: 1mm 2.5mm; margin-bottom: 2mm; background: var(--tag); color: var(--tag-ink); font-weight: 700; font-size: 8pt; letter-spacing: .08em; text-transform: uppercase; }
+.tick td, .tick th { text-align: center; }
+.tick td:first-child, .tick th:first-child { text-align: left; }
+.tick .sq { display: inline-block; width: 5mm; height: 5mm; border: 1.5px solid var(--ink); }
+.note { font-size: 8.5pt; color: #6b7080; }
+.cta { position: absolute; left: 18mm; right: 18mm; bottom: 24mm; padding: 8mm; background: var(--panel); color: var(--panel-text); }
+.cta h2 { color: #fff; font-size: 30pt; }
+.cta b { color: var(--accent); }
